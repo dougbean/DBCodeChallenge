@@ -99,7 +99,10 @@ namespace DBUnitTest
             
             mockStreamReader.Setup(s => s.CreateReader(It.IsAny<String>())).Verifiable();
                         
-            var parserService = new ParserService(mockStreamReader.Object, _fileSystemWrapper, _formatGetters, _delimiters);
+            var mockFileSystemWrapper = new Mock<IFileSystem>();
+            mockFileSystemWrapper.Setup(s => s.FileExists(It.IsAny<String>())).Returns(true);            
+            
+            var parserService = new ParserService(mockStreamReader.Object, mockFileSystemWrapper.Object, _formatGetters, _delimiters);
 
             //act
             IList<Person> persons = parserService.GetPersons(fileName);
@@ -137,8 +140,11 @@ namespace DBUnitTest
                    .Returns(new Queue<string>(new[] { builder.ToString(), null }).Dequeue);
 
             mockStreamReader.Setup(s => s.CreateReader(It.IsAny<String>())).Verifiable();
+                        
+            var mockFileSystemWrapper = new Mock<IFileSystem>();
+            mockFileSystemWrapper.Setup(s => s.FileExists(It.IsAny<String>())).Returns(true);            
             
-            var parserService = new ParserService(mockStreamReader.Object, _fileSystemWrapper, _formatGetters, _delimiters);
+            var parserService = new ParserService(mockStreamReader.Object, mockFileSystemWrapper.Object, _formatGetters, _delimiters);
 
             //act
             IList<Person> persons = parserService.GetPersons(fileName);
@@ -167,7 +173,10 @@ namespace DBUnitTest
 
             mockStreamReader.Setup(s => s.CreateReader(It.IsAny<String>())).Verifiable();
             
-            var parserService = new ParserService(mockStreamReader.Object, _fileSystemWrapper, _formatGetters, _delimiters);
+            var mockFileSystemWrapper = new Mock<IFileSystem>();
+            mockFileSystemWrapper.Setup(s => s.FileExists(It.IsAny<String>())).Returns(true); 
+           
+            var parserService = new ParserService(mockStreamReader.Object, mockFileSystemWrapper.Object, _formatGetters, _delimiters);
 
             //act
             IList<Person> persons = parserService.GetPersons(fileName);
@@ -194,8 +203,11 @@ namespace DBUnitTest
                  .Returns(new Queue<string>(new[] { line, line2, null }).Dequeue);
 
             mockStreamReader.Setup(s => s.CreateReader(It.IsAny<String>())).Verifiable();
-            
-            var parserService = new ParserService(mockStreamReader.Object, _fileSystemWrapper, _formatGetters, _delimiters);
+                       
+            var mockFileSystemWrapper = new Mock<IFileSystem>();
+            mockFileSystemWrapper.Setup(s => s.FileExists(It.IsAny<String>())).Returns(true);  
+           
+            var parserService = new ParserService(mockStreamReader.Object, mockFileSystemWrapper.Object, _formatGetters, _delimiters);
 
             //act
             IList<Person> persons = parserService.GetPersons(fileName);
@@ -217,9 +229,12 @@ namespace DBUnitTest
             mockStreamReader.Setup(s => s.ReadLine())
                  .Returns(new Queue<string>(new[] { "Rout Theodora Female Teal 2/3/1976", null }).Dequeue);
 
-            mockStreamReader.Setup(s => s.CreateReader(It.IsAny<String>())).Verifiable();            
-
-            var parserService = new ParserService(mockStreamReader.Object, _fileSystemWrapper, _formatGetters, _delimiters);
+            mockStreamReader.Setup(s => s.CreateReader(It.IsAny<String>())).Verifiable();
+           
+            var mockFileSystemWrapper = new Mock<IFileSystem>();
+            mockFileSystemWrapper.Setup(s => s.FileExists(It.IsAny<String>())).Returns(true);   
+           
+            var parserService = new ParserService(mockStreamReader.Object, mockFileSystemWrapper.Object, _formatGetters, _delimiters);
 
             //act
             IList<Person> persons = parserService.GetPersons(fileName);
