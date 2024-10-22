@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using DBLibrary.Model;
-using DBWebAPI.Model;
-using DBWebAPI.Controllers;
+//using DBWebAPI.Model;
+//using DBWebAPI.Controllers;
+using DBWebAPINet8.Model;
+using DBWebAPINet8.Controllers;
 
 namespace DBUnitTest
 {
@@ -12,7 +14,7 @@ namespace DBUnitTest
     public class RecordsControllerUnitTest
     {
         private RecordsController _controller;
-        
+
         [TestInitialize]
         public void Initialize()
         {
@@ -46,8 +48,8 @@ namespace DBUnitTest
             IList<Person> unsortedList = _controller._parserServiceWrapper.PersonCache;
 
             //act  
-            IList<Person> sortedList = _controller.Get(sortby);  
-            
+            IList<Person> sortedList = _controller.Get(sortby);
+
             var first = sortedList.FirstOrDefault();
             var last = sortedList.LastOrDefault();
 
@@ -64,8 +66,8 @@ namespace DBUnitTest
             IList<Person> unsortedList = _controller._parserServiceWrapper.PersonCache;
 
             //act 
-            IList<Person> sortedList = _controller.Get(sortby);  
-            
+            IList<Person> sortedList = _controller.Get(sortby);
+
             var first = sortedList.FirstOrDefault();
             var last = sortedList.LastOrDefault();
 
@@ -82,8 +84,8 @@ namespace DBUnitTest
             IList<Person> unsortedList = _controller._parserServiceWrapper.PersonCache;
 
             //act 
-            IList<Person> sortedList = _controller.Get(sortby);    
-            
+            IList<Person> sortedList = _controller.Get(sortby);
+
             var first = sortedList.FirstOrDefault();
             var last = sortedList.LastOrDefault();
 
@@ -97,7 +99,7 @@ namespace DBUnitTest
         {
             //arrange
             var controller = new RecordsController();
-            var record = new Record() { Delimiter = "pipe", Line = "Braams|Karrah|Female|Goldenrod|10/8/1968" };           
+            var record = new Record() { Delimiter = "pipe", Line = "Braams|Karrah|Female|Goldenrod|10/8/1968" };
             controller._parserServiceWrapper.PersonCache = new List<Person>();
 
             //act             
