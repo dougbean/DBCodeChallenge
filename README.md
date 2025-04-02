@@ -1,4 +1,4 @@
-Simple code challange.
+This is a code challange I did for a job interview.
 
 The console program will parse and sort comma, pipe and space delimited text files.
 Specify "comma", "pipe" or "space" in the name of your text files to tell the parser service to use the corresponding characters as delimiters.
