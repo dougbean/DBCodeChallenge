@@ -16,7 +16,7 @@ namespace DBUnitTest
         private ParserService _parserService;
         private IStreamReader _streamReader;
         private IFileSystem _fileSystemWrapper;
-        private List<FileFormatGetter> _formatGetters;
+        private List<IFileFormatGetter> _formatGetters;
         private Dictionary<FormatEnum, char> _delimiters; 
 
         [TestInitialize]
@@ -29,9 +29,9 @@ namespace DBUnitTest
             _parserService = new ParserService(_streamReader, _fileSystemWrapper, _formatGetters, _delimiters);
         }
 
-        private static List<FileFormatGetter> GetFormatGetters()
+        private static List<IFileFormatGetter> GetFormatGetters()
         {
-            return new List<FileFormatGetter>()
+            return new List<IFileFormatGetter>()
                   { new CommaFormatGetter(), new PipeFormatGetter(), new SpaceFormatGetter() };
         }
 
@@ -255,7 +255,7 @@ namespace DBUnitTest
             //the "space" string in the file name tells the parser to use a space delimiter
             string fileName = @"C:\gtr\gtr-space.txt";
 
-            List<FileFormatGetter> formatGetters = null;
+            List<IFileFormatGetter> formatGetters = null;
 
             Dictionary<FormatEnum, char> delimiters = GetDelimiters();
             
@@ -279,7 +279,7 @@ namespace DBUnitTest
             //the "space" string in the file name tells the parser to use a space delimiter
             string fileName = @"C:\gtr\gtr-space.txt";
            
-            List<FileFormatGetter> formatGetters = GetFormatGetters();
+            List<IFileFormatGetter> formatGetters = GetFormatGetters();
 
             Dictionary<FormatEnum, char> delimiters = null;
             

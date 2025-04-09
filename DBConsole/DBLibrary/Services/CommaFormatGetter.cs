@@ -2,9 +2,9 @@
 
 namespace DBLibrary.Services
 {
-    public class CommaFormatGetter : FileFormatGetter
+    public class CommaFormatGetter : IFileFormatGetter
     {
-        public override FormatEnum GetFileFormat(string fileName)
+        public FormatEnum GetFileFormat(string fileName)
         {
             FormatEnum result = new FormatEnum();
             if (fileName.Contains(Constants.Comma))

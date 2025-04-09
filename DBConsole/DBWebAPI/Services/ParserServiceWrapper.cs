@@ -31,16 +31,16 @@ namespace DBWebAPI.Services
 
         private void InitializeParserService()
         {
-            List<FileFormatGetter> formatGetters = GetFormatGetters();
+            List<IFileFormatGetter> formatGetters = GetFormatGetters();
             Dictionary<FormatEnum, char> delimiters = GetDelimiters();
             IStreamReader streamReader = new StreamReaderWrapper();
             IFileSystem fileSystemWrapper = new FileSystemWrapper();
             ParserService = new ParserService(streamReader, fileSystemWrapper, formatGetters, delimiters);
         }
 
-        private static List<FileFormatGetter> GetFormatGetters()
+        private static List<IFileFormatGetter> GetFormatGetters()
         {
-            return new List<FileFormatGetter>()
+            return new List<IFileFormatGetter>()
                   { new CommaFormatGetter(), new PipeFormatGetter(), new SpaceFormatGetter() };
         }
 

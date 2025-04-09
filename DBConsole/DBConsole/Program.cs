@@ -32,7 +32,7 @@ namespace DBConsole
 
         private static void InitializeServices()
         {
-            List<FileFormatGetter> formatGetters = GetFormatGetters();
+            List<IFileFormatGetter> formatGetters = GetFormatGetters();
             Dictionary<FormatEnum, char> delimiters = GetDelimiters();
             IStreamReader streamReader = new StreamReaderWrapper();
             IFileSystem fileSystemWrapper = new FileSystemWrapper();
@@ -40,9 +40,9 @@ namespace DBConsole
             _sortService = new SortService();
         }
 
-        private static List<FileFormatGetter> GetFormatGetters()
+        private static List<IFileFormatGetter> GetFormatGetters()
         {
-            return new List<FileFormatGetter>()
+            return new List<IFileFormatGetter>()
                   { new CommaFormatGetter(), new PipeFormatGetter(), new SpaceFormatGetter() };
         }
 

@@ -8,13 +8,13 @@ namespace DBLibrary.Services
 {    
     public class ParserService : IParser
     {
-        private readonly List<FileFormatGetter> _formatGetters;
+        private readonly List<IFileFormatGetter> _formatGetters;
         private readonly Dictionary<FormatEnum, char> _delimiters;
         private readonly IStreamReader _streamReaderWrapper;
         private readonly IFileSystem _fileSystemWrapper;
        
         public ParserService(IStreamReader streamReaderWrapper, IFileSystem fileSystemWrapper, 
-            List<FileFormatGetter> formatGetters, Dictionary<FormatEnum, char> delimiters)
+            List<IFileFormatGetter> formatGetters, Dictionary<FormatEnum, char> delimiters)
         {
             _streamReaderWrapper = streamReaderWrapper;
             _fileSystemWrapper = fileSystemWrapper;

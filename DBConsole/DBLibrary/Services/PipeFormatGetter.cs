@@ -2,9 +2,9 @@
 
 namespace DBLibrary.Services
 {
-    public class PipeFormatGetter : FileFormatGetter
+    public class PipeFormatGetter : IFileFormatGetter
     {
-        public override FormatEnum GetFileFormat(string fileName)
+        public FormatEnum GetFileFormat(string fileName)
         {
             FormatEnum result = new FormatEnum();
             if (fileName.Contains(Constants.Pipe))
