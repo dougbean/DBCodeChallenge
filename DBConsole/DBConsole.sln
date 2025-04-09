@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBConsole", "DBConsole\DBConsole.csproj", "{F9E03D85-41D2-46D9-BF0F-8F8F6B9E26A9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBLibrary", "DBLibrary\DBLibrary.csproj", "{E04E79E1-684A-429B-8BD8-039E0DD5A0BA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBUnitTest", "DBUnitTest\DBUnitTest.csproj", "{7ABC5BFA-8B47-4AEE-BD86-CBCC8483EA37}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBWebAPI", "DBWebAPI\DBWebAPI.csproj", "{3CAFFEF5-E47F-4232-AECA-487B5AE977A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBWebAPINet8", "DBWebAPINet8\DBWebAPINet8.csproj", "{F7994383-56F8-4E6D-33CD-8D0763DD8D72}"
 EndProject
@@ -31,10 +29,6 @@ Global
 		{7ABC5BFA-8B47-4AEE-BD86-CBCC8483EA37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ABC5BFA-8B47-4AEE-BD86-CBCC8483EA37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ABC5BFA-8B47-4AEE-BD86-CBCC8483EA37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3CAFFEF5-E47F-4232-AECA-487B5AE977A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CAFFEF5-E47F-4232-AECA-487B5AE977A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CAFFEF5-E47F-4232-AECA-487B5AE977A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CAFFEF5-E47F-4232-AECA-487B5AE977A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7994383-56F8-4E6D-33CD-8D0763DD8D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7994383-56F8-4E6D-33CD-8D0763DD8D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7994383-56F8-4E6D-33CD-8D0763DD8D72}.Release|Any CPU.ActiveCfg = Release|Any CPU

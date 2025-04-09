@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DBLibrary\DBLibrary.csproj" />    
-    <ProjectReference Include="..\DBWebAPI\DBWebAPI.csproj" />
+    <ProjectReference Include="..\DBLibrary\DBLibrary.csproj" />
+    <ProjectReference Include="..\DBWebAPINet8\DBWebAPINet8.csproj" />
   </ItemGroup>
 
 </Project>
