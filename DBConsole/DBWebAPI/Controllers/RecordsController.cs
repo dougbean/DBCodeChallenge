@@ -14,14 +14,14 @@ namespace DBWebAPI.Controllers
         public ParserServiceWrapper _parserServiceWrapper = ParserServiceWrapper.GetInstance();
         private SortServiceWrapper _sortServiceWrapper = SortServiceWrapper.GetInstance();
                
-        private List<SortSelector> _sortSelectors;
-        private List<SortSelector> SortSelectors
+        private List<ISortSelector> _sortSelectors;
+        private List<ISortSelector> SortSelectors
         {
             get
             {
                 if (_sortSelectors == null)
                 {
-                    _sortSelectors = new List<SortSelector>(){
+                    _sortSelectors = new List<ISortSelector>(){
                             new GenderSort(_sortServiceWrapper.SortService),
                             new BirthdateSort(_sortServiceWrapper.SortService),
                             new NameSort(_sortServiceWrapper.SortService)};

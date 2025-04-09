@@ -4,18 +4,18 @@ using DBLibrary.Model;
 
 namespace DBWebAPI.Services
 {
-    public class GenderSort : SortSelector
+    public class GenderSort : ISortSelector
     {
         private ISortService _sortService;
         public GenderSort(ISortService sortService)
         {
             _sortService = sortService;
         }
-      
-        public override IList<Person> GetGersons(IList<Person> unsortedList, string sortBy)
+
+        public IList<Person> GetGersons(IList<Person> unsortedList, string sortBy)
         {
             IList<Person> persons = new List<Person>();
-            if (sortBy.Contains(DBWebAPI.Model.Constants.Gender))
+            if (sortBy.Contains(Model.Constants.Gender))
             {
                 persons = _sortService.SortByGenderAndLastNameAscending(unsortedList);
             }

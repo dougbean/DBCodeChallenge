@@ -4,7 +4,7 @@ using DBLibrary.Model;
 
 namespace DBWebAPI.Services
 {
-    public class BirthdateSort : SortSelector
+    public class BirthdateSort : ISortSelector
     {
         private ISortService _sortService;
         public BirthdateSort(ISortService sortService)
@@ -12,10 +12,10 @@ namespace DBWebAPI.Services
             _sortService = sortService;
         }
 
-        public override IList<Person> GetGersons(IList<Person> unsortedList, string sortBy)
+        public IList<Person> GetGersons(IList<Person> unsortedList, string sortBy)
         {
             IList<Person> persons = new List<Person>();
-            if (sortBy.Contains(DBWebAPI.Model.Constants.Birthdate))
+            if (sortBy.Contains(Model.Constants.Birthdate))
             {
                 persons = _sortService.SortByBirthDateAscending(unsortedList);
             }
