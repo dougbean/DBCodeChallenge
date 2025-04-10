@@ -1,4 +1,4 @@
-This is a code challange I did for a job interview.
+ This is a code challange I did for a job interview.
 
 The requirements were to write a console program that will parse text files containing records that use different delimiters - "comma", "pipe" or "space".
 
@@ -23,6 +23,6 @@ Example jsons to POST:
 { "delimiter":"pipe", "line":"Fudd|Elmer|Male|Green|10/8/1954" }
 
 Execute GET with the following sort parameters (don't use quotes in the Swagger interface) - 
-gender
-birthdate
+gender,
+birthdate or 
 name 
