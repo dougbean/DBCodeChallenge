@@ -22,7 +22,7 @@ Example jsons to POST:
 { "delimiter":"space", "line":"Eltringham Nelia Female Crimson 9/5/1962" }   
 { "delimiter":"pipe", "line":"Fudd|Elmer|Male|Green|10/8/1954" }
 
-Execute GET with the following sort parameters (don't use quotes in the Swagger interface).
+Execute GET with the following sort parameters (don't use quotes in the Swagger interface) - 
 gender
 birthdate
 name 
