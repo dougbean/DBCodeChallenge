@@ -10,7 +10,7 @@ The StreamReaderWrapper and FileSystemWrapper in /DBLibrary/Wrappers implement t
 
 I also used the Singleton design pattern in the web api. https://en.wikipedia.org/wiki/Singleton_pattern. Some people claim that singleton is really an anti-pattern. I suppose that depends on how it is used and it is a matter for reflection. It serves my purpose here.
 
-The requirements also specified a web api where one can post one record at a time as a json. The post request puts a record in a cache and the get request gets those cached records.
+The requirements also specified a web api where one can POST one record at a time as a json. The POST request puts a record in a cache and the GET request gets those cached records.
 
 The following uri will bring up the Swagger interface:
 https://localhost:{port}/swagger/index.html
