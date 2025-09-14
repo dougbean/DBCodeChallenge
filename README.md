@@ -2,7 +2,7 @@
 
 The requirements were to write a console program that would parse text files containing records that use different delimiters - "comma", "pipe" or "space".
 
-I used the Stategy design pattern to implement the Open Closed Principle - "software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification". https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle 
+I used the Strategy design pattern to implement the Open Closed Principle - "software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification". https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle 
 
 I use "comma", "pipe" or "space" in the name of the text files to tell the parser service which strategy to use. 
 
